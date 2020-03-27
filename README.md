@@ -1,3 +1,30 @@
+# vOW4SIKE
+## Parallel collision search for the cryptanalysis of SIKE
+
+The vOW4SIKE project provides C code that implements the parallel collision search algorithm by van Oorschot and Wiener (vOW) [1]. The algorithm can be instantiated for generic collision finding and for solving the supersingular isogeny problem in the context of the Supersingular Isogeny Key Encapsulation protocol SIKE [2]. The goal of the project is to concretely assess the classical security of SIKE parameter sets. The code was used for the experiments to obtain the results described in more detail in the research paper [3].
+
+The code was developed by [Microsoft Research](http://research.microsoft.com/) for experimentation purposes.
+
+# Dependencies
+- SIDH v3.0 (C Edition) (included)
+
+
+## Installation instructions
+
+## Contributors
+- Fernando Virdia
+- Joost Renes
+
+## License
+vOW4SIKE is licensed under the MIT License; see [`License`](LICENSE) for details.
+
+# References
+[1] Paul C. van Oorschot, Michael J. Wiener: Parallel Collision Search with Cryptanalytic Applications. Journal of Cryptology, 12(1):1–28, 1999.
+[2] David Jao, Reza Azarderakhsh, Matthew Campagna, Craig Costello, Luca De Feo, Basil Hess, Amir Jalali, Brian Koziel, Brian LaMacchia, Patrick Longa, Michael Naehrig, Geovandro Pereira, Joost Renes, Vladimir Soukharev, and David Urbanik: SIKE: Supersingular Isogeny Key Encapsulation.
+[`https://sike.org`](https://sike.org).
+[3] Craig Costello, Patrick Longa, Michael Naehrig, Joost Renes, Fernando Virdia: Improved Classical Cryptanalysis of SIKE in Practice.
+[`https://eprint.iacr.org/2019/298`](https://eprint.iacr.org/2019/298).
+
 
 # Contributing
 
