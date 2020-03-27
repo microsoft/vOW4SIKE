@@ -20,8 +20,10 @@ vOW4SIKE is licensed under the MIT License; see [`License`](LICENSE) for details
 
 # References
 [1] Paul C. van Oorschot, Michael J. Wiener: Parallel Collision Search with Cryptanalytic Applications. Journal of Cryptology, 12(1):1–28, 1999.
+
 [2] David Jao, Reza Azarderakhsh, Matthew Campagna, Craig Costello, Luca De Feo, Basil Hess, Amir Jalali, Brian Koziel, Brian LaMacchia, Patrick Longa, Michael Naehrig, Geovandro Pereira, Joost Renes, Vladimir Soukharev, and David Urbanik: SIKE: Supersingular Isogeny Key Encapsulation.
 [`https://sike.org`](https://sike.org).
+
 [3] Craig Costello, Patrick Longa, Michael Naehrig, Joost Renes, Fernando Virdia: Improved Classical Cryptanalysis of SIKE in Practice.
 [`https://eprint.iacr.org/2019/298`](https://eprint.iacr.org/2019/298).
 
