@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\AES">
+      <UniqueIdentifier>{aeb093f1-8edf-430c-9ee1-a6cbfd934b40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\xxhash">
+      <UniqueIdentifier>{e73b3ea1-28fc-42e3-80c4-78c61b520542}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\vow.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sidh_vow.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\prng.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\aes\aes.c">
+      <Filter>Source Files\AES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\aes\aes_c.c">
+      <Filter>Source Files\AES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\aes\aes_ni.c">
+      <Filter>Source Files\AES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\storage.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\memory.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\networking.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\sidh_vow_base.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\benchmarking.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\xxhash\xxhash.c">
+      <Filter>Source Files\xxhash</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\triples.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\prng.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\aes\aes.h">
+      <Filter>Source Files\AES</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\aes\aes_local.h">
+      <Filter>Source Files\AES</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\storage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\networking.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\sidh_vow_base.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\xxhash\xxhash.h">
+      <Filter>Source Files\xxhash</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
