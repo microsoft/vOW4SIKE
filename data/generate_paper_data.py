@@ -77,7 +77,7 @@ def generating_adj_table_2(inputdir="./raw_data", outputdir="../../../paper/tabl
     cpus = data[state_lengths[0]][mem_lengths[0]].keys()[0]
     iterations = data[state_lengths[0]][mem_lengths[0]][cpus]["total_number"]
 
-    caption = "Reproduction of Table 2 from~\\cite{canadians}, using the %s XOF on \\%s. Experiments are averaged over %d function versions using %d cores." % (
+    caption = "Reproduction of Table 2 from Adj et al., using the %s XOF on \\%s. Experiments are averaged over %d function versions using %d cores." % (
         xof,
         machine,
         iterations,
@@ -143,7 +143,7 @@ def generating_adj_table_3(structure, inputdir="./raw_data", outputdir="../../..
     data = parse(filename=filenames[0])
     cpus = data[data.keys()[0]][data[data.keys()[0]].keys()[0]].keys()[0]
 
-    caption = "Reproduction of Table 3 from~\\cite{canadians}, using our SIDH code and isogeny precomputation on \\%s. Experiments are run using %d cores." % (
+    caption = "Reproduction of Table 3 from Adj et al., using our SIDH code and isogeny precomputation on \\%s. Experiments are run using %d cores." % (
         machine,
         cpus
     )
@@ -245,7 +245,7 @@ def generating_adj_table_3_gen(aes_ni=True, inputdir="./raw_data", outputdir="..
     state_lengths = sorted(data.keys())
     cpus = data[state_lengths[0]][data[state_lengths[0]].keys()[0]].keys()[0]
 
-    caption = "Reproduction of Table 3 from~\\cite{canadians}, using our a %s generic random function on \\%s. Experiments are run using %d cores." % (
+    caption = "Reproduction of Table 3 from Adj et al., using our a %s generic random function on \\%s. Experiments are run using %d cores." % (
         xof,
         machine,
         cpus
