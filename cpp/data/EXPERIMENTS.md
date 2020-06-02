@@ -2,7 +2,7 @@
 
 The following experiments are run on a generic XOF based on AES-NI.
 
-The cited output files can be found in `/cpp/data/raw_data/`.
+The cited output files can be found in [/cpp/data/raw_data](/cpp/data/raw_data).
 
 ## Reproducing the results by Adj et al. [5]
 

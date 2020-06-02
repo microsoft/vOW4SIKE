@@ -32,7 +32,7 @@ This will result in two new directories, `tables` and `figures`.
 
 - Table 1: data can be found in `tables/adj_table_3` (expected values for SIDH should be generated from the Table's caption).
 - Table 2: data can be found in `tables/precomputation_table`.
-- Table 3: data can be generated following the same steps described here from the [`/cpp/data`](../cpp/data/) directory and looking into `/cpp/tables/adj_table_3`.
+- Table 3: data can be generated following the same steps described here from the [/cpp/data](/cpp/data/) directory and looking into `/cpp/tables/adj_table_3`.
 - Table 4: data can be found in `tables/vow_table_1`.
 - Table 5 and 6: values are extrapolated from benchmarks on the [SIDH](https://github.com/Microsoft/PQCrypto-SIDH) library.
 - Table 7 (and its interpolation): can be generated running `sage p434.sage`.

@@ -3,7 +3,7 @@
 This library aims to provide an extensible implementation of the van Oorschot-Wiener (vOW) parallel collision finding algorithm, aiming to match the efficiency of the C implementation, while being easier to extend to other target collision problems.
 The core implementation is written in C++ and should compile on both Windows and Linux. Python2 wrappers are provided to make testing and statistics generation easier on Linux.
 
-For instructions on dependencies, external source code, experiment generation, contributions and licensing, consult the C implementation's [README.md](../README.md).
+For instructions on dependencies, external source code, experiment generation, contributions and licensing, consult the C implementation's [/README.md](/README.md).
 
 ### C++ interface
 
@@ -31,7 +31,7 @@ To compile and run the C++-only code on Windows:
 
 To compile the Python 2 wrappers, and run experiments using our Python scripts, run the following code from `/cpp`.
 
-A copy of `numpy.i` should be located in `/cpp/swig/numpy.i`. See [README.md](/README.md) for instructions.
+A copy of `numpy.i` should be located in `/cpp/swig/numpy.i`. See [/README.md](/README.md) for instructions.
 
 #### Linux
 
@@ -41,13 +41,13 @@ cd python
 python2 gen.py -h
 ```
 
-More details on the Python scripts can be found in [python/README.md](python/README.md).
+More details on the Python scripts can be found in [/cpp/python/README.md](/cpp/python/README.md).
 
 ## Reproducing results
 
-A list of commands to reproduce our experiments can be found in [data/EXPERIMENTS.md](data/EXPERIMENTS.md).
+A list of commands to reproduce our experiments can be found in [/cpp/data/EXPERIMENTS.md](/cpp/data/EXPERIMENTS.md).
 
-Instructions for reproducing the tables and figures in [6] can be found in [../data/PAPER.md](../data/PAPER.md).
+Instructions for reproducing the tables and figures in [6] can be found in [/data/PAPER.md](/data/PAPER.md).
 
 ## Implementation details
 
