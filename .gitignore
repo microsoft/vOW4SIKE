@@ -50,3 +50,14 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# vOW4SIKE specific build output
+vow_gen/
+python/vow_gen
+vow_sidh/
+python/vow_sidh
+vow_sike/
+python/vow_sike
+Visual Studio/SIDH/SIDH.VC.db
+Visual Studio/SIDH/SIDH.VC.VC.opendb
+Visual Studio/SIDH/.vs/SIDH/v14/.suo
