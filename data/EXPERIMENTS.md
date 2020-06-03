@@ -3,7 +3,7 @@
 For a generic XOF, we run experiments on an AES-NI-based and an xxHash-based one.
 To switch between the two, change settings in `/src/prng.h` and recompile.
 
-The cited output files can be found in `/data/raw_data/`
+The cited output files can be found in `/data/raw_data/`.
 
 ## Reproducing the results by Adj et al. [5]
 

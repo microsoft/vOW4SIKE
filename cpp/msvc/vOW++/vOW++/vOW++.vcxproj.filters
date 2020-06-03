@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\gen">
+      <UniqueIdentifier>{907b3f3b-67de-4512-bdde-a8506ce24fb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\memory">
+      <UniqueIdentifier>{e8334c51-b109-493b-8e4b-703a06ffd329}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\prng">
+      <UniqueIdentifier>{2dc491cd-48c9-42c7-a4fc-650880ab2597}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\types">
+      <UniqueIdentifier>{19e41492-85da-4a9c-a384-a75d6105fe3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils">
+      <UniqueIdentifier>{66dd58ce-cbe5-4e8e-8b81-78b575c0c717}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gen">
+      <UniqueIdentifier>{793ebdf8-551f-49f6-9e7f-d0d3817c74e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\memory">
+      <UniqueIdentifier>{c4bd6d8d-341e-407f-a632-5c05fdf28ca3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\prng">
+      <UniqueIdentifier>{61ab5aa4-e94d-4111-9051-b92570591a03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\types">
+      <UniqueIdentifier>{d8f32354-ebe0-4c83-955d-9444865928f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\utils">
+      <UniqueIdentifier>{4ab8f4e1-7805-4bef-8097-b0a979b2a15f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\dependencies">
+      <UniqueIdentifier>{c5797a39-aded-4826-9578-076b5c87a2da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\dependencies\aes">
+      <UniqueIdentifier>{a4d85a8d-a677-4460-a1c9-4773ec09dc5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dependencies">
+      <UniqueIdentifier>{a8498708-c1d2-4ab6-9cee-17b39e2bee36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\templating">
+      <UniqueIdentifier>{667bb0ef-5c93-4de5-bd00-a12df0890659}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\dependencies\aes">
+      <UniqueIdentifier>{16c204cb-a851-4e0d-b321-7c6942d1a360}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\gen\points.hpp">
+      <Filter>Header Files\gen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\gen\random_function.hpp">
+      <Filter>Header Files\gen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\memory\interface.hpp">
+      <Filter>Header Files\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\memory\ram.hpp">
+      <Filter>Header Files\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\prng\aes.hpp">
+      <Filter>Header Files\prng</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\prng\interface.hpp">
+      <Filter>Header Files\prng</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\prng\lcg.hpp">
+      <Filter>Header Files\prng</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\prng\xof.h">
+      <Filter>Header Files\prng</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\types\triples.hpp">
+      <Filter>Header Files\types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\types\state.hpp">
+      <Filter>Header Files\types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\types\random_function.hpp">
+      <Filter>Header Files\types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\types\points.hpp">
+      <Filter>Header Files\types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\types\instance.hpp">
+      <Filter>Header Files\types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\sync_strategies.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\vow.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\cycles.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\fix_overflow.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\types\resync_state.hpp">
+      <Filter>Header Files\types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\swig_helpers.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\dependencies\aes\aes.h">
+      <Filter>Header Files\dependencies\aes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\dependencies\aes\aes_local.h">
+      <Filter>Header Files\dependencies\aes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\bintree.hpp">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\buftools.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\memavail.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\types\bintree.hpp">
+      <Filter>Header Files\types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\types\crumbs.hpp">
+      <Filter>Header Files\types</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\gen\instance.hpp">
+      <Filter>Header Files\gen</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\sync_strategies.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\vow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\gen\points.cpp">
+      <Filter>Source Files\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\gen\random_function.cpp">
+      <Filter>Source Files\gen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\memory\ram.cpp">
+      <Filter>Source Files\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\utils\cycles.c">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\utils\fix_overflow.c">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\types\points.cpp">
+      <Filter>Source Files\types</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\types\state.cpp">
+      <Filter>Source Files\types</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\types\triples.cpp">
+      <Filter>Source Files\types</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\prng\aes.cpp">
+      <Filter>Source Files\prng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\prng\lcg.cpp">
+      <Filter>Source Files\prng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\prng\xof.c">
+      <Filter>Source Files\prng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\benchmarking.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\swig_helpers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\dependencies\aes\aes.c">
+      <Filter>Source Files\dependencies\aes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\dependencies\aes\aes_c.c">
+      <Filter>Source Files\dependencies\aes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\dependencies\aes\aes_ni.c">
+      <Filter>Source Files\dependencies\aes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\utils\buftools.c">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\utils\memavail.c">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\utils\bintree.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\gen\instance.cpp">
+      <Filter>Source Files\gen</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\src\README.md">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="..\..\..\src\templating\points.inc">
+      <Filter>Header Files\templating</Filter>
+    </None>
+    <None Include="..\..\..\src\templating\state.inc">
+      <Filter>Header Files\templating</Filter>
+    </None>
+    <None Include="..\..\..\src\templating\sync_strategies.inc">
+      <Filter>Header Files\templating</Filter>
+    </None>
+    <None Include="..\..\..\src\templating\triples.inc">
+      <Filter>Header Files\templating</Filter>
+    </None>
+    <None Include="..\..\..\src\templating\vow.inc">
+      <Filter>Header Files\templating</Filter>
+    </None>
+    <None Include="..\..\..\src\templating\bintree.inc">
+      <Filter>Header Files\templating</Filter>
+    </None>
+    <None Include="..\..\..\src\templating\memory.inc">
+      <Filter>Header Files\templating</Filter>
+    </None>
+    <None Include="..\..\..\src\templating\swig_helpers.inc">
+      <Filter>Header Files\templating</Filter>
+    </None>
+    <None Include="..\..\..\src\gen\instances.inc">
+      <Filter>Header Files\gen</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{12063CB5-999F-41AE-8C9D-30595D2D4903}</ProjectGuid>
+    <RootNamespace>vOW</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <ObjectFileName> $(IntDir)\%(RelativeDir)\%(Filename).obj</ObjectFileName>
+      <PreprocessorDefinitions>__WINDOWS__;_FAST_;_AMD64_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <OpenMPSupport>true</OpenMPSupport>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <MinimalRebuild>false</MinimalRebuild>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>false</ConformanceMode>
+      <PreprocessorDefinitions>__WINDOWS__;_FAST_;_AMD64_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <OpenMPSupport>true</OpenMPSupport>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\config.h" />
+    <ClInclude Include="..\..\..\src\dependencies\aes\aes.h" />
+    <ClInclude Include="..\..\..\src\dependencies\aes\aes_local.h" />
+    <ClInclude Include="..\..\..\src\gen\instance.hpp" />
+    <ClInclude Include="..\..\..\src\gen\points.hpp" />
+    <ClInclude Include="..\..\..\src\gen\random_function.hpp" />
+    <ClInclude Include="..\..\..\src\memory\interface.hpp" />
+    <ClInclude Include="..\..\..\src\memory\ram.hpp" />
+    <ClInclude Include="..\..\..\src\prng\aes.hpp" />
+    <ClInclude Include="..\..\..\src\prng\interface.hpp" />
+    <ClInclude Include="..\..\..\src\prng\lcg.hpp" />
+    <ClInclude Include="..\..\..\src\prng\xof.h" />
+    <ClInclude Include="..\..\..\src\settings.h" />
+    <ClInclude Include="..\..\..\src\swig_helpers.hpp" />
+    <ClInclude Include="..\..\..\src\sync_strategies.hpp" />
+    <ClInclude Include="..\..\..\src\types\bintree.hpp" />
+    <ClInclude Include="..\..\..\src\types\crumbs.hpp" />
+    <ClInclude Include="..\..\..\src\types\instance.hpp" />
+    <ClInclude Include="..\..\..\src\types\points.hpp" />
+    <ClInclude Include="..\..\..\src\types\random_function.hpp" />
+    <ClInclude Include="..\..\..\src\types\resync_state.hpp" />
+    <ClInclude Include="..\..\..\src\types\state.hpp" />
+    <ClInclude Include="..\..\..\src\types\triples.hpp" />
+    <ClInclude Include="..\..\..\src\utils\bintree.hpp" />
+    <ClInclude Include="..\..\..\src\utils\buftools.h" />
+    <ClInclude Include="..\..\..\src\utils\cycles.h" />
+    <ClInclude Include="..\..\..\src\utils\fix_overflow.h" />
+    <ClInclude Include="..\..\..\src\utils\memavail.h" />
+    <ClInclude Include="..\..\..\src\vow.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\benchmarking.cpp" />
+    <ClCompile Include="..\..\..\src\dependencies\aes\aes.c" />
+    <ClCompile Include="..\..\..\src\dependencies\aes\aes_c.c" />
+    <ClCompile Include="..\..\..\src\dependencies\aes\aes_ni.c" />
+    <ClCompile Include="..\..\..\src\gen\instance.cpp" />
+    <ClCompile Include="..\..\..\src\gen\points.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)gen\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\gen\random_function.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)gen\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\main.cpp" />
+    <ClCompile Include="..\..\..\src\memory\ram.cpp" />
+    <ClCompile Include="..\..\..\src\prng\aes.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)prng\</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\prng\lcg.cpp" />
+    <ClCompile Include="..\..\..\src\prng\xof.c" />
+    <ClCompile Include="..\..\..\src\swig_helpers.cpp" />
+    <ClCompile Include="..\..\..\src\sync_strategies.cpp" />
+    <ClCompile Include="..\..\..\src\types\points.cpp" />
+    <ClCompile Include="..\..\..\src\types\state.cpp" />
+    <ClCompile Include="..\..\..\src\types\triples.cpp" />
+    <ClCompile Include="..\..\..\src\utils\bintree.cpp" />
+    <ClCompile Include="..\..\..\src\utils\buftools.c" />
+    <ClCompile Include="..\..\..\src\utils\cycles.c" />
+    <ClCompile Include="..\..\..\src\utils\fix_overflow.c" />
+    <ClCompile Include="..\..\..\src\utils\memavail.c" />
+    <ClCompile Include="..\..\..\src\vow.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\src\gen\instances.inc" />
+    <None Include="..\..\..\src\README.md" />
+    <None Include="..\..\..\src\templating\bintree.inc" />
+    <None Include="..\..\..\src\templating\memory.inc" />
+    <None Include="..\..\..\src\templating\points.inc" />
+    <None Include="..\..\..\src\templating\state.inc" />
+    <None Include="..\..\..\src\templating\swig_helpers.inc" />
+    <None Include="..\..\..\src\templating\sync_strategies.inc" />
+    <None Include="..\..\..\src\templating\triples.inc" />
+    <None Include="..\..\..\src\templating\vow.inc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

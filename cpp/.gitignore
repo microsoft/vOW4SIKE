@@ -1,0 +1,5 @@
+swig/numpy.i
+pyvow/
+*.pyc
+obj/
+bin/

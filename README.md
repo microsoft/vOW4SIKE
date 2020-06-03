@@ -122,6 +122,10 @@ A list of commands to reproduce our experiments can be found in [data/EXPERIMENT
 
 Instructions for reproducing the tables and figures in [6] can be found in [data/PAPER.md](data/PAPER.md).
 
+## C++ implementation
+
+Information about the C++ implementation of the attack against a generic AES-NI random function can be found in [cpp/README.md](cpp/README.md).
+
 ## Contributors
 
 - Fernando Virdia
