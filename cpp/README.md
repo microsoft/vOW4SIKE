@@ -19,12 +19,12 @@ make bin/main
 ./bin/main -h
 ```
 
-#### Windows **todo** (last step)
+#### Windows
 
 To compile and run the C++-only code on Windows:
 
 1. Open `cpp/msvc/vOW++.sln` in Visual Studio 2015 (the Community Edition is sufficient).
-2. Choose the `Fast` configuration, and build the solution.
+2. Choose the `Release` configuration, and build the solution.
 3. Execute `vOW++` to run experiments on a generic random function.
 
 ### Python 2 interface
@@ -70,7 +70,7 @@ The vOW algorithm finds collisions in a random function `f : S -> S` over some s
 
 To attack a different specific collision problem, for example a SIKE secret isogeny recovery problem, one can implement a module with the same interfaces as in `/cpp/src/gen`. "Point", "RandomFunction" and "Instances" classes have to be written, implementing the points in `S`, and `f`, and code to instantiate the problem from specific parameters.
 
-Once the implementation is written, the filesi n `templating` should be updated to include appropriate templating of the vOW class over the new `f` and `S`.
+Once the implementation is written, the files in `templating` should be updated to include appropriate templating of the vOW class over the new `f` and `S`.
 
 ### Implementing memory drivers
 

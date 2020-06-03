@@ -14,8 +14,6 @@ extern "C"
 #endif
 }
 
-// general approach to resync to generalise this would be great.
-
 template <class Point, class Memory, class RandomFunction, class PRNG, class Instance>
 void print_all_threads(
     const vOW<Point, Memory, RandomFunction, PRNG, Instance> *vow,
@@ -37,7 +35,6 @@ void print_all_threads(
  * reset their state to its own.
 */
 
-// revisit the code path
 template <class Point, class Memory, class RandomFunction, class PRNG, class Instance>
 bool windowed_resync_should_resync(
     const vOW<Point, Memory, RandomFunction, PRNG, Instance> *vow,
@@ -62,25 +59,16 @@ void windowed_resync_do_resync(
 {
     if (private_state.thread_id == 0)
     {
-        // print_all_threads(S, private_state, S->resync_state->cores);
-
         // need to resync to this
         S->resync_state->function_version = private_state.step_function->function_version;
         S->resync_state->random_functions = private_state.random_functions;
 
         // have resync'd
         S->resync_state->cores[private_state.thread_id] = 1;
-
-        // #pragma omp critical
-        // {
-        // printf("\n0 thinks we should resync to %" PRIu64 ", counting %" PRIu64, private_state.step_function->function_version, private_state.random_functions);
-        // print_all_threads(S, private_state, S->resync_state->cores);
-        // }
     }
     else
     {
         uint16_t cores_that_resyncd = 0;
-        // print_all_threads(S, private_state, S->resync_state->cores);
 
         // need to resync
         private_state.step_function->function_version = S->resync_state->function_version;
@@ -88,7 +76,7 @@ void windowed_resync_do_resync(
         private_state.current_dist = 0;
 
         // we currently have a point on the path of this new version
-        // that comes from the previous one. we could get away with
+        // that comes from the previous one. We could get away with
         // only setting private_state.current->current_steps = 0
         // but let's just restart
         private_state.current->sample(private_state.prng);
@@ -99,9 +87,6 @@ void windowed_resync_do_resync(
 
         // have resync'd
         S->resync_state->cores[private_state.thread_id] = 1;
-
-        // #pragma omp critical
-        // printf("\n%d is resyncing to %" PRIu64 ", counting %" PRIu64, private_state.thread_id, private_state.step_function->function_version, private_state.random_functions);
 
         // have all the others also resync'd?
         for (int i = 0; i < S->instance->N_OF_CORES; i++)
@@ -114,14 +99,7 @@ void windowed_resync_do_resync(
             // stop the master thread from asking to resync at every step of the current random function
             // gets cleared when the master thread updates its random function
             S->resync_state->cores[0] = 2;
-            // #pragma omp critical
-            // {
-            // printf("\n%d thinks everybody is done", private_state.thread_id);
-            // print_all_threads(S, private_state, S->resync_state->cores);
-            // }
         }
-
-        // print_all_threads(S, private_state, S->resync_state->cores);
     }
 }
 
@@ -142,22 +120,11 @@ void windowed_resync(const vOW<Point, Memory, RandomFunction, PRNG, Instance> *v
 template <class Point, class Memory, class RandomFunction, class PRNG, class Instance>
 bool stakhanovist_resync_should_resync(vOW<Point, Memory, RandomFunction, PRNG, Instance> *S, private_state_t<Point, PRNG, RandomFunction, Instance> &private_state)
 {
-    // dbg output
-    // #pragma omp critical
-    // {
-    // printf("\n%d: has done its part for function %" PRIu64" (counted %" PRIu64 ")", private_state.thread_id, private_state.step_function->function_version, private_state.random_functions);
-    // }
-    // print_all_threads(S, private_state, S->resync_state->cores);
-
     // we are running the real attack, and we are done with out official portion of the function
     // signal we are done
     if (S->resync_state->cores[private_state.thread_id] == 0)
     {
         S->resync_state->cores[private_state.thread_id] = 1;
-
-        // dbg output
-        // printf("\n%d: has signalled it's done", private_state.thread_id);
-        // print_all_threads(S, private_state, S->resync_state->cores);
     }
 
     // check if also others are done
@@ -169,12 +136,6 @@ bool stakhanovist_resync_should_resync(vOW<Point, Memory, RandomFunction, PRNG, 
 
     if (private_state.thread_id == 0)
     {
-        // dbg output
-        // #pragma omp critical
-        // {
-        // if (everybody_done) { printf("\n%d: is leader and thinks everyone is done", private_state.thread_id); }
-        // }
-
         // I'm the leader and I think everybody is done.
         bool everybody_moved_on = true;
         for (int i = 1; i < S->instance->N_OF_CORES; i++)
@@ -186,12 +147,6 @@ bool stakhanovist_resync_should_resync(vOW<Point, Memory, RandomFunction, PRNG, 
     }
     else
     {
-        // dbg output
-        // #pragma omp critical
-        // {
-        // if (everybody_done) { printf("\n%d: is not leader and thinks everyone is done", private_state.thread_id); }
-        // }
-
         // I'm not leader and I think everyone is done.
         bool have_I_already_increased_fun_version = S->resync_state->cores[private_state.thread_id] == 2;
         return everybody_done && !have_I_already_increased_fun_version;
@@ -203,23 +158,12 @@ void stakhanovist_resync_do_resync(vOW<Point, Memory, RandomFunction, PRNG, Inst
 {
     if (private_state.thread_id == 0)
     {
-        // dbg output
-        // #pragma omp critical
-        // {
-        // printf("\n%d: is leader and thinks everyone is moved on. it samples a new function", private_state.thread_id);
-        // }
         memset(S->resync_state->cores, 0, S->instance->N_OF_CORES * sizeof(uint8_t));
-        // dbg output
-        // print_all_threads(S, private_state, S->resync_state->cores);
     }
     else
     {
-        // dbg output
         // move to the next function, thread = 0 does it last, in the next block
         S->resync_state->cores[private_state.thread_id] = 2;
-        // dbg output
-        // print_all_threads(S, private_state, S->resync_state->cores);
-
     }
     private_state.random_functions++;
     private_state.current_dist = 0;
@@ -270,7 +214,6 @@ bool nobiggie_resync_should_resync(vOW<Point, Memory, RandomFunction, PRNG, Inst
         S->resync_state->cores[private_state.thread_id] = 1;
     }
 
-    // print_all_threads(S, private_state, S->resync_state->cores);
     bool everybody_done;
     int i;
     do
@@ -294,7 +237,7 @@ template <class Point, class Memory, class RandomFunction, class PRNG, class Ins
 void nobiggie_resync_do_resync(vOW<Point, Memory, RandomFunction, PRNG, Instance> *S, private_state_t<Point, PRNG, RandomFunction, Instance> &private_state)
 {
     // from here on I know we are all without success
-    private_state.random_functions++; // maybe this could be merged with update_random_function
+    private_state.random_functions++;
     private_state.current_dist = 0;
     private_state.current->sample(private_state.prng);
     if (S->instance->HANSEL_GRETEL)
@@ -302,16 +245,8 @@ void nobiggie_resync_do_resync(vOW<Point, Memory, RandomFunction, PRNG, Instance
         private_state.clean_crumbs();
     }
     private_state.step_function->update();
-    // #pragma omp critical
-    // {
-    // printf("\n%d: thinks everyone is done", private_state.thread_id);
-    // printf("\n%d is resyncing to %" PRIu64 ", counting %" PRIu64, private_state.thread_id, private_state.step_function->function_version, private_state.random_functions);
-    // }
 
     S->resync_state->cores[private_state.thread_id] = 2;
-
-    // we could use signals instead of sleep
-    // to avoid busy waiting. in practice this seems to do fine
 
     if (private_state.thread_id == 0)
     {
@@ -327,8 +262,6 @@ void nobiggie_resync_do_resync(vOW<Point, Memory, RandomFunction, PRNG, Instance
                 everybody_moved_on &= (S->resync_state->cores[i] == 2);
             }
         } while (!everybody_moved_on);
-        // #pragma omp critical
-        // printf("\n%d: is leader and thinks everybody moved on", private_state.thread_id);
         memset(S->resync_state->cores, 0, S->instance->N_OF_CORES * sizeof(uint8_t));
     }
 }

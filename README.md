@@ -5,6 +5,8 @@ The algorithm can be instantiated for generic collision finding and for solving 
 the Supersingular Isogeny Diffie-Hellman key exchange protocol SIDH [2,3], as well as the Supersingular Isogeny Key Encapsulation protocol SIKE [4].
 The goal of the project is to concretely assess the classical security of SIKE parameter sets. The code was used for the experiments to obtain the results described in more detail in the research paper [6], to reproduce the results for SIDH presented in [5], and was developed for experimentation purposes only.
 
+An extensible C++ version is also provided (in `cpp/`) that can be used to extend the attack more easily to other target collision problems.
+
 ## Installation instructions
 
 ### Dependencies

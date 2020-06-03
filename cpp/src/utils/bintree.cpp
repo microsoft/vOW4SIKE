@@ -6,8 +6,7 @@
 #include "bintree.hpp"
 #include "../config.h"
 
-/* TODO: This code assumes the whole state fits into 1 word, 
- * may need to pull changes from C p434 implementation */
+/* NOTE: This code assumes the whole state fits into 1 word */
 
 /* Return true if n0 < n1, false otherwise */
 template <class Point>
@@ -37,8 +36,6 @@ bool isSmallerSt(const nodeVal_t<Point> *n0, const nodeVal_t<Point> *n1, uint64_
 template <class Point, class Instance>
 static node_t<Point> *newNode(const nodeVal_t<Point> *c, uint64_t *size, Instance *instance)
 {
-	// todo: should we check if we run out of memory?
-
 	node_t<Point> *nd = (node_t<Point> *) calloc(1, sizeof(node_t<Point>));
 	nd->data = (nodeVal_t<Point> *) calloc(1, sizeof(nodeVal_t<Point>));
 
