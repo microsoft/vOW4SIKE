@@ -145,7 +145,7 @@ vOW4SIKE is licensed under the MIT License; see [`License`](LICENSE) for details
 
 [3] David Jao, Luca De Feo, Jérôme Plût: Towards quantum-resistant cryptosystems from supersingular elliptic curve isogenies, J. Math. Cryptol. 8(3):209-247, 2014, [`https://eprint.iacr.org/2011/506`](https://eprint.iacr.org/2011/506).
 
-[4] David Jao, Reza Azarderakhsh, Matthew Campagna, Craig Costello, Luca De Feo, Basil Hess, Amir Jalali, Brian Koziel, Brian LaMacchia, Patrick Longa, Michael Naehrig, Geovandro Pereira, Joost Renes, Vladimir Soukharev, David Urbanik: SIKE: Supersingular Isogeny Key Encapsulation,
+[4] David Jao, Reza Azarderakhsh, Matthew Campagna, Craig Costello, Luca De Feo, Basil Hess, Aaron Hutchinson, Amir Jalali, Koray Karabina, Brian Koziel, Brian LaMacchia, Patrick Longa, Michael Naehrig, Geovandro Pereira, Joost Renes, Vladimir Soukharev, David Urbanik: SIKE: Supersingular Isogeny Key Encapsulation,
 [`https://sike.org`](https://sike.org).
 
 [5] Gora Adj, Daniel Cervantes-Vázquez, Jesús-Javier Chi-Domínguez, Alfred Menezes, Francisco Rodríguez-Henríquez: On the cost of computing isogenies between supersingular elliptic curves, SAC 2018, pp. 322-343,
